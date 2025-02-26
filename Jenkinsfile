@@ -27,7 +27,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage()
+                    buildImage 'dancedevops/my-app:jma-10.0'
                 }
             }
         }
