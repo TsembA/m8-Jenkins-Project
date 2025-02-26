@@ -24,10 +24,12 @@ pipeline {
             }
         }
 
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
-                    buildImage 'dancedevops/my-app:jma-10.1'
+                    buildImage 'dancedevops/my-app:jma-1.2.3'
+                    dockerLogin()
+                    dockerPush 'dancedevops/my-app:jma-1.2.3'
                 }
             }
         }
