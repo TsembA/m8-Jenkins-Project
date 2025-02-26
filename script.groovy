@@ -6,9 +6,9 @@ def buildJar() {
 def buildImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t nanatwn/my-app:jma-1.2.3 .'
+        sh 'docker build -t dancedevops/my-app:jma-1.2.3 .'
         sh 'echo $PASS | docker login -u $USER --password-stdin'
-        sh 'docker push nanatwn/my-app:jma-1.2.3'
+        sh 'docker push dancedevops/my-app:jma-1.2.3'
     }
 }
 
