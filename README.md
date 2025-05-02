@@ -1,4 +1,4 @@
-# 📦 Jenkins - Automation for CI/CD
+# 📦 Jenkins - Automation for CI/CD + Project work
 
 ## 🚀 What is Jenkins?
 
